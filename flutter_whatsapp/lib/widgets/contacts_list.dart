@@ -7,51 +7,48 @@ class ContactsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {},
-      child: Padding(
-        padding: const EdgeInsets.only(top: 10),
-        child: Column(
-          children: [
-            Expanded(
-              child: ListView.builder(
-                shrinkWrap: true,
-                itemCount: info.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 8.0),
-                    child: ListTile(
-                      leading: CircleAvatar(
-                        backgroundImage:
-                            NetworkImage(info[index]['profilePic'].toString()),
-                      ),
-                      title: Text(
-                        info[index]['name'].toString(),
-                        style: const TextStyle(fontSize: 18),
-                      ),
-                      subtitle: Padding(
-                        padding: const EdgeInsets.only(top: 6.0),
-                        child: Text(
-                          info[index]['message'].toString(),
-                          style: TextStyle(fontSize: 15),
-                        ),
-                      ),
-                      trailing: Text(
-                        info[index]['time'].toString(),
-                        style:
-                            const TextStyle(fontSize: 13, color: Colors.grey),
+    return Padding(
+      padding: const EdgeInsets.only(top: 10),
+      child: ListView.builder(
+        shrinkWrap: true,
+        itemCount: info.length,
+        itemBuilder: (BuildContext context, int index) {
+          return Column(
+            children: [
+              InkWell(
+                onTap: () {},
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 8.0),
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      backgroundImage:
+                          NetworkImage(info[index]['profilePic'].toString()),
+                    ),
+                    title: Text(
+                      info[index]['name'].toString(),
+                      style: const TextStyle(fontSize: 18),
+                    ),
+                    subtitle: Padding(
+                      padding: const EdgeInsets.only(top: 6.0),
+                      child: Text(
+                        info[index]['message'].toString(),
+                        style: TextStyle(fontSize: 15),
                       ),
                     ),
-                  );
-                },
+                    trailing: Text(
+                      info[index]['time'].toString(),
+                      style: const TextStyle(fontSize: 13, color: Colors.grey),
+                    ),
+                  ),
+                ),
               ),
-            ),
-            const Divider(
-              color: dividerColor,
-              indent: 85,
-            )
-          ],
-        ),
+              const Divider(
+                color: dividerColor,
+                indent: 85,
+              ),
+            ],
+          );
+        },
       ),
     );
   }
