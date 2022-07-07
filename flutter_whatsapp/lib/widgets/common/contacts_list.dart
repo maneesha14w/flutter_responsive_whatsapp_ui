@@ -32,7 +32,7 @@ class ContactsList extends StatelessWidget {
                       padding: const EdgeInsets.only(top: 6.0),
                       child: Text(
                         info[index]['message'].toString(),
-                        style: TextStyle(fontSize: 15),
+                        style: const TextStyle(fontSize: 15),
                       ),
                     ),
                     trailing: Text(
