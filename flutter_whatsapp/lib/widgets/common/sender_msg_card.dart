@@ -34,6 +34,7 @@ class SenderMessageCard extends StatelessWidget {
                 bottom: 2,
                 right: 10,
                 child: Row(
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
                       date,

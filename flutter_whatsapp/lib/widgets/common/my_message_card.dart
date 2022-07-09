@@ -39,7 +39,7 @@ class MyMessageCard extends StatelessWidget {
                     Text(
                       date,
                       style:
-                          const TextStyle(fontSize: 13, color: Colors.white60),
+                          const TextStyle(fontSize: 12, color: Colors.white60),
                     ),
                     const SizedBox(
                       width: 5,

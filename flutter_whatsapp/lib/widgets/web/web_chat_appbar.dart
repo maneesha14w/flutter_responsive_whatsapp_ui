@@ -16,21 +16,23 @@ class WebChatAppBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Row(
-            children: [
-              const CircleAvatar(
-                backgroundImage: NetworkImage(
-                    'https://upload.wikimedia.org/wikipedia/commons/8/85/Elon_Musk_Royal_Society_%28crop1%29.jpg'),
-                radius: 30,
-              ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width * 0.01,
-              ),
-              Text(
-                info[0]['name'].toString(),
-                style: const TextStyle(fontSize: 18),
-              )
-            ],
+          Flexible(
+            child: Row(
+              children: [
+                const CircleAvatar(
+                  backgroundImage: NetworkImage(
+                      'https://upload.wikimedia.org/wikipedia/commons/8/85/Elon_Musk_Royal_Society_%28crop1%29.jpg'),
+                  radius: 30,
+                ),
+                Text(
+                  info[0]['name'].toString(),
+                  style: const TextStyle(fontSize: 18),
+                ),
+                const Spacer(
+                  flex: 5,
+                ),
+              ],
+            ),
           ),
           Row(
             children: [

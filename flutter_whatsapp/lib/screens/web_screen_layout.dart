@@ -65,6 +65,34 @@ class WebScreenLayout extends StatelessWidget {
                             color: Colors.grey,
                           ),
                         ),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                              left: 10.0,
+                              right: 15.0,
+                            ),
+                            child: TextField(
+                              decoration: InputDecoration(
+                                fillColor: searchBarColor,
+                                filled: true,
+                                hintText: 'Type a message',
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                  borderSide: const BorderSide(
+                                      width: 0, style: BorderStyle.none),
+                                ),
+                                contentPadding: const EdgeInsets.only(left: 20),
+                              ),
+                            ),
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.mic,
+                            color: Colors.grey,
+                          ),
+                        ),
                       ],
                     ),
                   ),
